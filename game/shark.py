@@ -2,6 +2,8 @@
 Shark entity with AI behavior.
 """
 import math
+import os
+import sys
 import random
 import pygame
 from .config import (
@@ -9,6 +11,18 @@ from .config import (
     WALL_MARGIN, CORNER_MARGIN, WALL_FORCE, WANDER_FORCE, PANIC_ESCAPE_SPEED,
     BLUE
 )
+
+
+def resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller."""
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except AttributeError:
+        # Running in development
+        base_path = os.path.abspath(".")
+    
+    return os.path.join(base_path, relative_path)
 
 
 class Shark:
@@ -32,7 +46,9 @@ class Shark:
         
         try:
             for frame_name in frame_names:
-                img = pygame.image.load(f"{assets_path}/{frame_name}")
+                # Use resource_path for PyInstaller compatibility
+                img_path = resource_path(os.path.join(assets_path, frame_name))
+                img = pygame.image.load(img_path)
                 original_size = img.get_size()
                 scale_factor = SHARK_SIZE / original_size[0]
                 self.size = (

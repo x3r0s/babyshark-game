@@ -40,3 +40,8 @@ Thumbs.db
 # Project specific
 debug_mp.py
 test_imports.py
+
+# PyInstaller
+build/
+dist/
+*.spec
