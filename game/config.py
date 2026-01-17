@@ -1,0 +1,37 @@
+"""
+Game configuration constants.
+"""
+
+# Screen settings
+DEFAULT_WIDTH = 1200
+DEFAULT_HEIGHT = 800
+GAME_TITLE = "Baby Shark Escape"
+
+# Colors
+WHITE = (255, 255, 255)
+BLUE = (173, 216, 230)
+RED = (255, 0, 0)
+
+# Shark settings
+SHARK_SIZE = 200  # Width in pixels
+MAX_SPEED = 10
+ACCEL = 0.5
+DAMPING = 0.95
+ESCAPE_RADIUS = 300
+
+# AI behavior
+WALL_MARGIN = 100
+CORNER_MARGIN = 150
+WALL_FORCE = 0.8
+WANDER_FORCE = 0.1
+PANIC_ESCAPE_SPEED = 15
+
+# Camera settings
+CAMERA_WIDTH = 1280
+CAMERA_HEIGHT = 720
+
+# Hand tracking settings
+MAX_NUM_HANDS = 1
+MIN_DETECTION_CONFIDENCE = 0.7
+MIN_TRACKING_CONFIDENCE = 0.5
+PALM_LANDMARK_INDEX = 9  # Middle finger MCP
