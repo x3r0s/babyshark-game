@@ -1,7 +1,7 @@
 """
-Baby Shark Escape - Main Game Entry Point
+Baby Shark - Main Game Entry Point
 
-A simple interactive game for babies where a shark runs away from hand movements.
+A simple interactive game for babies where a shark follows hand movements.
 """
 import pygame
 from game import Camera, HandTracker, Shark

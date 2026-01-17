@@ -5,7 +5,7 @@ Game configuration constants.
 # Screen settings
 DEFAULT_WIDTH = 1200
 DEFAULT_HEIGHT = 800
-GAME_TITLE = "Baby Shark Escape"
+GAME_TITLE = "Baby Shark"
 
 # Colors
 WHITE = (255, 255, 255)

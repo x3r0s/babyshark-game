@@ -12,7 +12,7 @@ from .config import (
 
 
 class Shark:
-    """Shark entity with escape AI and swimming animation."""
+    """Shark entity with follow AI and swimming animation."""
     
     def __init__(self, x, y, assets_path="assets"):
         self.pos = [x, y]

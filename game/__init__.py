@@ -1,5 +1,5 @@
 """
-Baby Shark Escape - Game Package
+Baby Shark - Game Package
 """
 from .config import *
 from .camera import Camera
